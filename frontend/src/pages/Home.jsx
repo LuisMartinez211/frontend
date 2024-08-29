@@ -54,10 +54,11 @@ const Home = () => {
       <div className="container mx-auto mt-10 text-center px-4 sm:px-6 lg:px-8">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">Panel de información</h1>
         <p className="mb-6 text-base sm:text-lg md:text-xl">
-          Inscribete como atleta y ve lo ganadores generales aqui.
+          Inscribete como atleta y ve los ganadores generales aquí.
         </p>
 
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {/* Centrado de botones */}
+        <div className="flex justify-center space-x-6">
           <Link
             to="/register"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline"
@@ -69,12 +70,6 @@ const Home = () => {
             className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline"
           >
             Ver Ganadores Generales
-          </Link>
-          <Link
-            to="/dashboard"
-            className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline"
-          >
-            Panel de Control (Administradores)
           </Link>
         </div>
 
