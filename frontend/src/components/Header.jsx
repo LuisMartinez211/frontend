@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../assets/4600d925-5c63-45f1-8808-502ebc077dcd.png';
+import logo from '../assets/logosls.png';
 
 
 const Header = () => {
