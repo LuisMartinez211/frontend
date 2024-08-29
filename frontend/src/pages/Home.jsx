@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import imagen from '../assets/pexels-olly-3760259.jpg'
 
 const Home = () => {
@@ -49,7 +50,7 @@ const Home = () => {
           Empezar
         </motion.a>
       </div>
-      
+
       <div className="container mx-auto mt-10 text-center">
       <h1 className="text-4xl font-bold mb-8">Bienvenido al Torneo de Atletismo</h1>
       <p className="mb-6 text-lg">
