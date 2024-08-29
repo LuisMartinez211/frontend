@@ -4,7 +4,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Register from './pages/Register';
-import Dashboard from './pages/dashboard';
+import Dashboard from './pages/Dashboard';
 import OverallResults from './pages/OverallResults';
 import CategoryResults from './pages/CategoryResults';
 import TimeRegistration from './pages/TimeRegistration';
