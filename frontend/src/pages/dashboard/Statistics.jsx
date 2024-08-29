@@ -8,7 +8,7 @@ const Statistics = () => {
   useEffect(() => {
     const fetchStatistics = async () => {
       try {
-        const response = await fetch('/api/dashboard/statistics'); // Supongamos que tienes esta ruta en el backend
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/dashboard/statistics`); // Supongamos que tienes esta ruta en el backend
         const data = await response.json();
         setStatistics(data);
       } catch (error) {
