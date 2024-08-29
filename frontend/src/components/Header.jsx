@@ -20,13 +20,13 @@ const Header = () => {
         </div>
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <a href="/" className="relative hover:text-secondary menu-link">
+          <a href="/" className="relative hover:text-secondary menu-link menuboton">
             Inicio
           </a>
-          <a href="/dashboard" className="relative hover:text-secondary menu-link">
+          <a href="/dashboard" className="relative hover:text-secondary menu-link menuboton">
             Dashboard
           </a>
-          <a href="/register" className="relative hover:text-secondary menu-link">
+          <a href="/register" className="relative hover:text-secondary menu-link menuboton">
             Registrarse
           </a>
         </nav>
