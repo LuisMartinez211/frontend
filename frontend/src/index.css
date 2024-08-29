@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.menu-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #EF792B; 
+    transition: width 0.3s;
+  }
+  
+  .menu-link:hover::after {
+    width: 100%;
+  }
+  
+  .custom-bg-color {
+    background-color: #4b5a9d; 
+  }
+  
+  .sizelogo {
+    height: 130px;
+  }
