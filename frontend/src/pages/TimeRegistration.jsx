@@ -6,7 +6,7 @@ import TimeRecordForm from '../components/TimeRecordForm';
 const TimeRegistration = () => {
   const handleTimeRegister = async (formData) => {
     try {
-      const response = await fetch('/api/times/register', {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/times/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
