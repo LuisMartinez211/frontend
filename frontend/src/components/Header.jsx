@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import logo from '../assets/4600d925-5c63-45f1-8808-502ebc077dcd.png';
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,46 +53,25 @@ const Header = () => {
         } md:hidden bg-primary text-white`}
       >
         <a
-          href="#about-us"
+          href="/"
           className="block py-2 px-4 text-sm hover:bg-secondary hover:text-white"
           onClick={toggleMenu}
         >
-          About Us
+          Inicio
         </a>
         <a
-          href="#activities"
+          href="/dashboard"
           className="block py-2 px-4 text-sm hover:bg-secondary hover:text-white"
           onClick={toggleMenu}
         >
-          Activities
+          Dashboard
         </a>
         <a
-          href="#testimonials"
+          href="/register"
           className="block py-2 px-4 text-sm hover:bg-secondary hover:text-white"
           onClick={toggleMenu}
         >
-          Testimonials
-        </a>
-        <a
-          href="#pricing"
-          className="block py-2 px-4 text-sm hover:bg-secondary hover:text-white"
-          onClick={toggleMenu}
-        >
-          Pricing
-        </a>
-        <a
-          href="#blog"
-          className="block py-2 px-4 text-sm hover:bg-secondary hover:text-white"
-          onClick={toggleMenu}
-        >
-          Blog
-        </a>
-        <a
-          href="#contact"
-          className="block py-2 px-4 text-sm hover:bg-secondary hover:text-white"
-          onClick={toggleMenu}
-        >
-          Contact
+          Registrarse
         </a>
       </div>
     </header>
