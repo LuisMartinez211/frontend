@@ -29,7 +29,7 @@ const Home = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: 'easeOut' }}
           >
-            Sumérgete en un mundo de fitness acuático
+            Torneo de aguas abiertas SLS
           </motion.h1>
           <motion.p
             className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6"
@@ -37,7 +37,7 @@ const Home = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
           >
-            Experimente lo mejor del entrenamiento acuático en Aguagym - Su viaje hacia el bienestar comienza aquí.
+            Bienvenido a la plataforma oficial de SLS, donde podras registrate para el torneo de aguas abiertas 2024.
           </motion.p>
           <motion.a
             href="#"
@@ -52,9 +52,9 @@ const Home = () => {
       </section>
 
       <div className="container mx-auto mt-10 text-center px-4 sm:px-6 lg:px-8">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">Bienvenido al Torneo de Atletismo</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">Panel de información</h1>
         <p className="mb-6 text-base sm:text-lg md:text-xl">
-          Esta es la plataforma oficial para gestionar el torneo. Aquí puedes inscribirte, registrar tiempos, y ver los resultados de la competencia.
+          Inscribete como atleta y ve lo ganadores generales aqui.
         </p>
 
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -63,12 +63,6 @@ const Home = () => {
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline"
           >
             Inscribirse como Atleta
-          </Link>
-          <Link
-            to="/time-registration"
-            className="bg-green-500 hover:bg-green-700 text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline"
-          >
-            Registrar Tiempos
           </Link>
           <Link
             to="/results/overall"

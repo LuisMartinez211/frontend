@@ -14,7 +14,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <a href="#hero">
+          <a href="/">
             <img src={logo} alt="Aguagym Logo" className="sizelogo" />
           </a>
         </div>
