@@ -108,7 +108,7 @@ const Home = () => {
 
       {/* About Us Section */}
       <section id="about-us" className="bg-gray-100 py-16">
-        <div className="container mx-auto flex flex-col md:flex-row items-center px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-left px-4 sm:px-6 lg:px-8">
           <motion.div
             className="md:w-1/2"
             initial={{ x: -50, opacity: 0 }}
@@ -118,10 +118,10 @@ const Home = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Sobre Nosotros
             </h2>
-            <p className="text-lg fonttext mb-4 pr-20">
+            <p className="text-lg sm:text-xl md:text-2xl mb-4 md:pr-20">
               Somos una organización dedicada a promover el deporte acuático en todas sus formas. Con años de experiencia, hemos organizado torneos y eventos que han reunido a los mejores atletas del mundo.
             </p>
-            <p className="text-lg fonttext mb-4 pr-20">
+            <p className="text-lg sm:text-xl md:text-2xl mb-4 md:pr-20">
               Únete a nosotros en esta nueva edición del Torneo de Aguas Abiertas y forma parte de una experiencia inolvidable.
             </p>
           </motion.div>
@@ -131,14 +131,15 @@ const Home = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: 'easeOut' }}
           >
-          <video
-          className="rounded-lg shadow-lg"
-          src="https://cdn.pixabay.com/video/2022/04/12/113675-698820547_large.mp4"
-          type="video/mp4"
-          autoPlay
-          loop
-          muted
-        />
+            <video
+              className="rounded-lg shadow-lg"
+              src="https://cdn.pixabay.com/video/2022/04/12/113675-698820547_large.mp4"
+              type="video/mp4"
+              autoPlay
+              loop
+              muted
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
           </motion.div>
         </div>
       </section>
@@ -210,7 +211,7 @@ const Home = () => {
             transition={{ duration: 1, ease: 'easeOut', delay: 1.5 }}
           >
             <img
-              src={imagen}
+              src="https://cdn.pixabay.com/photo/2017/08/07/08/45/sea-2601557_1280.jpg"
               alt="Torneo de Aguas Abiertas"
               className="mx-auto rounded-lg shadow-md max-w-full h-auto"
             />
