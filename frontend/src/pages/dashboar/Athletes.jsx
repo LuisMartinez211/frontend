@@ -8,7 +8,7 @@ const Athletes = () => {
   useEffect(() => {
     const fetchAthletes = async () => {
       try {
-        const response = await fetch('/api/athletes');
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/athletes`);
         const data = await response.json();
         setAthletes(data);
       } catch (error) {
