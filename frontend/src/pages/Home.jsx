@@ -40,8 +40,8 @@ const Home = () => {
             Experimente lo mejor del entrenamiento acuático en Aguagym - Su viaje hacia el bienestar comienza aquí.
           </motion.p>
           <motion.a
-            href="#contact"
-            className="inline-block bg-white text-primary font-bold py-2 px-6 sm:py-3 sm:px-8 md:py-4 md:px-10 rounded-full shadow-lg hover:bg-secondary hover:text-white transition-all duration-300"
+            href="#"
+            className="inline-block bg-white text-black font-bold py-2 px-6 sm:py-3 sm:px-8 md:py-4 md:px-10 rounded-full shadow-lg hover:bg-secondary hover:text-white transition-all duration-300"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: 1 }}
