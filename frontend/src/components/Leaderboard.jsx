@@ -8,7 +8,7 @@ const Leaderboard = ({ category }) => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const url = category ? `${import.meta.env.VITE_BACKEND_URL}/api/times/category/${category}` : '/api/times/winners';
+        const url = category ? `${import.meta.env.VITE_BACKEND_URL}/api/times/category/${category}` : `${import.meta.env.VITE_BACKEND_URL}/api/times/winners`;
         const response = await fetch(url);
         const data = await response.json();
         setResults(data);
