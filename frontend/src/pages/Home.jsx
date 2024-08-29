@@ -13,7 +13,7 @@ const Home = () => {
         {/* Video Background */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
-          src="https://cdn.pixabay.com/video/2021/06/17/78059-564490562_large.mp4"
+          src="https://cdn.pixabay.com/video/2019/06/05/24216-340670744_large.mp4"
           type="video/mp4"
           autoPlay
           loop
