@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { FaUsers, FaListAlt, FaClock } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Pie } from 'react-chartjs-2';
-import 'chart.js/auto'; // Esto es necesario para evitar problemas con el registro de gráficos
 
 const Statistics = () => {
   const [statistics, setStatistics] = useState({});

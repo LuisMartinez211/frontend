@@ -1,36 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logosls.png';
 
-
-const Header = () => {
+const Header = ({ auth, setAuth }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('role');
+    setAuth({ token: null, role: null });
+    navigate('/');
+  };
+
   return (
     <header className="custom-bg-color text-white shadow-lg static w-full z-50 top-0">
       <div className="container mx-auto flex justify-between items-center p-4">
-        {/* Logo */}
         <div className="text-2xl font-bold">
-          <a href="/">
+          <Link to="/">
             <img src={logo} alt="Aguagym Logo" className="sizelogo" />
-          </a>
+          </Link>
         </div>
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <a href="/" className="relative hover:text-secondary menu-link menuboton">
-            Inicio
-          </a>
-          <a href="/dashboard" className="relative hover:text-secondary menu-link menuboton">
-            Dashboard
-          </a>
-          <a href="/register" className="relative hover:text-secondary menu-link menuboton">
-            Registrarse
-          </a>
+          <Link to="/" className="relative hover:text-secondary menu-link menuboton">Inicio</Link>
+          {!auth.token ? (
+            <>
+              <Link to="/login" className="relative hover:text-secondary menu-link menuboton">Iniciar Sesión</Link>
+              <Link to="/register" className="relative hover:text-secondary menu-link menuboton">Registrarse</Link>
+            </>
+          ) : (
+            <>
+              {auth.role === 'admin' && (
+                <>
+                  <Link to="/dashboard" className="relative hover:text-secondary menu-link menuboton">Dashboard</Link>
+                </>
+              )}
+              <button onClick={handleLogout} className="relative hover:text-secondary menu-link menuboton">Cerrar Sesión</button>
+            </>
+          )}
         </nav>
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden flex items-center px-3 py-2 border rounded text-black border-black hover:text-secondary hover:border-secondary"
           onClick={toggleMenu}
@@ -46,33 +58,21 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={`${
-          isMenuOpen ? 'block' : 'hidden'
-        } md:hidden bg-primary text-white`}
-      >
-        <a
-          href="/"
-          className="block py-2 px-4 menuboton hover:bg-secondary hover:text-white"
-          onClick={toggleMenu}
-        >
-          Inicio
-        </a>
-        <a
-          href="/dashboard"
-          className="block py-2 px-4 menuboton hover:bg-secondary hover:text-black"
-          onClick={toggleMenu}
-        >
-          Dashboard
-        </a>
-        <a
-          href="/register"
-          className="block py-2 px-4 menuboton hover:bg-secondary hover:text-white"
-          onClick={toggleMenu}
-        >
-          Registrarse
-        </a>
+      <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden bg-primary text-white`}>
+        <Link to="/" className="block py-2 px-4 menuboton hover:bg-secondary hover:text-white" onClick={toggleMenu}>Inicio</Link>
+        {!auth.token ? (
+          <>
+            <Link to="/login" className="block py-2 px-4 menuboton hover:bg-secondary hover:text-white" onClick={toggleMenu}>Iniciar Sesión</Link>
+            <Link to="/register" className="block py-2 px-4 menuboton hover:bg-secondary hover:text-white" onClick={toggleMenu}>Registrarse</Link>
+          </>
+        ) : (
+          <>
+            {auth.role === 'admin' && (
+              <Link to="/dashboard" className="block py-2 px-4 menuboton hover:bg-secondary hover:text-white" onClick={toggleMenu}>Dashboard</Link>
+            )}
+            <button onClick={handleLogout} className="block py-2 px-4 menuboton hover:bg-secondary hover:text-white">Cerrar Sesión</button>
+          </>
+        )}
       </div>
     </header>
   );
