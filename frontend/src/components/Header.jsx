@@ -32,7 +32,7 @@ const Header = () => {
         </nav>
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden flex items-center px-3 py-2 border rounded text-white border-white hover:text-secondary hover:border-secondary"
+          className="md:hidden flex items-center px-3 py-2 border rounded text-black border-black hover:text-secondary hover:border-secondary"
           onClick={toggleMenu}
         >
           <svg
@@ -54,21 +54,21 @@ const Header = () => {
       >
         <a
           href="/"
-          className="block py-2 px-4 text-sm hover:bg-secondary hover:text-white"
+          className="block py-2 px-4 menuboton hover:bg-secondary hover:text-white"
           onClick={toggleMenu}
         >
           Inicio
         </a>
         <a
           href="/dashboard"
-          className="block py-2 px-4 text-sm hover:bg-secondary hover:text-white"
+          className="block py-2 px-4 menuboton hover:bg-secondary hover:text-black"
           onClick={toggleMenu}
         >
           Dashboard
         </a>
         <a
           href="/register"
-          className="block py-2 px-4 text-sm hover:bg-secondary hover:text-white"
+          className="block py-2 px-4 menuboton hover:bg-secondary hover:text-white"
           onClick={toggleMenu}
         >
           Registrarse
