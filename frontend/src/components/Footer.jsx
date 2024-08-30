@@ -11,15 +11,6 @@ const Footer = () => {
           <Link to="/" className="text-white hover:text-gray-400 mx-2">
             Inicio
           </Link>
-          <Link to="/register" className="text-white hover:text-gray-400 mx-2">
-            Inscripción
-          </Link>
-          <Link to="/time-registration" className="text-white hover:text-gray-400 mx-2">
-            Registrar Tiempos
-          </Link>
-          <Link to="/results/overall" className="text-white hover:text-gray-400 mx-2">
-            Resultados
-          </Link>
           <Link to="/dashboard" className="text-white hover:text-gray-400 mx-2">
             Panel de Control
           </Link>
