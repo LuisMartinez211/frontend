@@ -1,5 +1,3 @@
-// src/pages/CategoryResults.jsx
-
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Leaderboard from '../components/Leaderboard';
