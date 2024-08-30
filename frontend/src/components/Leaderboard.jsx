@@ -41,16 +41,25 @@ const Leaderboard = ({ category }) => {
 
       {/* Leaderboard */}
       <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-10">
-          {category ? `Ganadores de la categoría ${category}` : 'Ganadores generales'}
-        </h2>
+        <motion.h2 
+          className="text-3xl font-bold text-center mb-10 relative inline-block after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-0 after:h-1 after:bg-blue-500"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, after: { scaleX: 1 } }}
+          transition={{ duration: 1, ease: 'easeInOut' }}
+          style={{ 
+            animation: 'underline 1s ease forwards',
+            transformOrigin: 'left center'
+          }}
+        >
+          {category ? `Podio de Ganadores` : 'Clasificación Final'}
+        </motion.h2>
 
         {results.length > 0 ? (
           <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6">
             {results.slice(0, 3).map((record, index) => (
               <motion.div
                 key={index}
-                className="bg-white shadow-lg rounded-lg p-6 w-full md:w-1/3 transform transition-transform hover:scale-105"
+                className="bg-white shadow-lg rounded-lg p-6 w-full md:w-1/3 transform transition-transform hover:scale-105 shadow-lg shadow-blue-500/50"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
